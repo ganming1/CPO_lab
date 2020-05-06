@@ -22,5 +22,6 @@ we use the list to storage
     We encountered many problems with our own design of immutable, such as adding elements that caused problems with initialization,
     Reusing a mutable's constructor can still be solved.
     note implementation restriction;
-    immutable Poor use.
+    
+    immutable Poor use.  
   
