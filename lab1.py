@@ -82,15 +82,30 @@ class HashTable:
     def find(self, k):
         i = self.h(k)
         return self.T[i].find(k)
+    # def map_to_list(self):
 
 
-if __name__ == '__main__':
-    ht = HashTable()
-    ht.insert(1)
-    ht.insert(18)
-    ht.insert(29)
-    ht.insert(31)
-    print('\n'.join(map(str, ht.T)))
+ht = HashTable()
+ht.insert(1)
+ht.insert(18)
+ht.insert(29)
+ht.insert(31)
+print(ht)
+print(ht.T[1])
+print(type(ht.T[1]))
+type(ht)
+list=[]
+# for i in range(ht.size):
+#     if(ht.T[i]):
+       
+        # for j in :
+        #     print(j)
+        #     list.append(j)
+        #     print(j)
+        
 
-    print(ht.find(210))
+    
+# print(ht)  
+# print('\n'.join(map(str, ht.T)))
+
 
