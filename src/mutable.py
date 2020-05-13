@@ -94,6 +94,7 @@ class HashTable:
         for i in range(len(lst)):
             self.insert(lst[i])
 
+    # the insert function is add_to_tail
     def insert(self, k):
         i = self.hash(k)
         if self.find(k):
@@ -134,12 +135,23 @@ class HashTable:
                 self.insert(j)
         return self
 
-    def reduce(self, sum):
-        result = 0
+    def reduce(self, f, initial_state):
+        state = initial_state
         for i in range(self.size):
-            for j in self.T[i]:
-                result += j
-        return result
+            if(self.T[i]):
+                current = self.T[i].head
+                while current is not None:
+                    state = f(state, current.item)
+                    current = current.next
+        return state
+
+    def map(self, f):
+        for i in range(self.size):
+            current = SignLinklist.Node(self.T[i].head.item)
+            while current:
+                self.T[i].head.item = f(current.item)
+                current = current.next
+        return self
 
 
 
@@ -147,20 +159,29 @@ class HashTable:
         i = self.hash(k)
         return self.T[i].find(k)
 
+
 if __name__ == '__main__':
-    ht = HashTable()
-    ht.insert(1)
-    ht.insert(11)
-    ht.insert(21)
-    ht.insert(18)
-    # ht.insert(29)
-    # ht.insert(28)
-    # ht.insert(38)
-    # ht.insert(219)
-    ht1 = HashTable(10,[1, 32, 5, 67, 8])
-    # ht.mconcat(ht1)
+    ht = HashTable(10,[1, 2, 3])
     print('\n'.join(map(str, ht.T)))
-    print(ht.reduce("sum"))
+    # ht=ht.delete(1)
+    print(ht.itm_size())
+
+# if __name__ == '__main__':
+#     ht = HashTable(3,[1, 2, 3])
+#     # ht.insert(1)
+#     # ht.insert(11)
+#     # ht.insert(21)
+#     # ht.insert(18)
+#     # # ht.insert(29)
+#     # # ht.insert(28)
+#     # # ht.insert(38)
+#     # # ht.insert(219)
+#     # ht1 = HashTable(10,[1, 32, 5, 67, 8])
+#     # ht.mconcat(ht1)
+#     ht.reduce(lambda st, e: st + e, 0)
+#     print(ht.map(str).hashTable_to_list())
+#     # print('\n'.join(map(str, ht.T)))
+    # print(ht.reduce("sum"))
 
 #     print('\n'.join(map(str, ht.T)))
 #

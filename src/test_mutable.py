@@ -44,8 +44,27 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(t.mconcat(t2).hashTable_to_list(), [10, 1, 3, 4, 5, 9])
 
     def test_reduce(self):
-        t = HashTable(10, [1, 2, 3, 4, 5])
-        self.assertEqual(t.reduce("sum"), 15)
+        # sum of empty list
+        lst = HashTable(0)
+        self.assertEqual(lst.reduce(lambda st, e: st + e, 0), 0)
+        # sum of list
+        lst = HashTable(10 , [1, 2, 3])
+        self.assertEqual(lst.reduce(lambda st, e: st + e, 0), 6)
+        # size
+        test_data = [
+            [],
+            [1],
+            [1, 2]
+        ]
+        for e in test_data:
+            lst = HashTable(10, e)
+            self.assertEqual(lst.reduce(lambda st, _: st + 1, 0), lst.itm_size())
+
+    def test_map(self):
+        lst = HashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+        lst.map(str)
+        self.assertEqual(lst.hashTable_to_list(), ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
+
 
     def test_find(self):
         t = HashTable()
