@@ -1,6 +1,6 @@
 # Computational Process Organization Lab1     
 ## basic info
-* **laboratory work number** : WG 5 
+* **laboratory work number and Group name** : WG 5 
 * **variant description** :  Hash-map (collision resolution: separate chaining)
 * **list of group members** : Gan Ming ; Wang Ying lun
 * **synopsis**:
