@@ -1,3 +1,5 @@
+from mutable import *
+
 class SignLinklist:
     # Node class
     class Node:
@@ -62,19 +64,20 @@ class SignLinklist:
         return '<' + ','.join(map(str, self)) + '>'
 
 
-# Hash table is similar to collection
-class HashTable:
+# # Hash table is similar to collection
+
+class ImHashTable(HashTable):
     # def __init__(self, size = 10, list = None):
     #     self.size = size
     #     self.T = [SignLinklist() for x in range(self.size)]
     #     if (list):
     #         self.list_to_hashTable(list)
 
-    def __init__(self, size = 10, list = None):
-        self.size = size
-        self.T = [SignLinklist() for x in range(self.size)]
-        if (list):
-            self.list_to_hashTable(list)
+
+
+
+
+
 
 
     def size(self):
@@ -101,9 +104,9 @@ class HashTable:
         for i in range(len(lst)):
             self.insert(lst[i])
 
-    def insert(self, k):
+    def im_insert(self, k):
         i = self.hash(k)
-        t2 = HashTable(self.hashTable_to_list())
+        t2 = HashTable(10, self.hashTable_to_list())
         if t2.find(k):
             # print('Duplicated Insert')
             return self
@@ -111,35 +114,65 @@ class HashTable:
             t2.T[i].append(k)
             return self
 
-    # def delete(self, k):
-    #     t2 = HashTable(self.hashTable_to_list())
-    #     i = k % t2.size
-    #     for j in t2.T[i]:
-    #         if j == k and j == t2.T[i].head.item:
-    #             t2.T[i].head = t2.T[i].head.next
-    #             break
-    #         if j == k and j == t2.T[i].tail.item:
-    #            pre = t2.T[i].head
-    #            while pre.next != t2.T[i].tail:
-    #                pre = pre.next
-    #            t2.T[i].tail = None
-    #            pre.next = None
-    #            t2.T[i].tail = pre
-    #            break
-    #         else:
-    #             pre = t2.T[i].head
-    #             print(type(pre.next))
-    #             while pre.next.item != k:
-    #                 pre = pre.next
-    #             if pre.next.item == k:
-    #                 pre.next = pre.next.next
-    #                 break
-    #     return self
+    def delete(self, k):
+        t2 = ImHashTable(10,self.hashTable_to_list())
+        i = k % t2.size
+        for j in t2.T[i]:
+            if j == k and j == t2.T[i].head.item:
+                t2.T[i].head = t2.T[i].head.next
+                break
+            if j == k and j == t2.T[i].tail.item:
+               pre = t2.T[i].head
+               while pre.next != t2.T[i].tail:
+                   pre = pre.next
+               t2.T[i].tail = None
+               pre.next = None
+               t2.T[i].tail = pre
+               break
+            else:
+                pre = t2.T[i].head
+                print(type(pre.next))
+                while pre.next.item != k:
+                    pre = pre.next
+                if pre.next.item == k:
+                    pre.next = pre.next.next
+                    break
+        return self
+
+    def mconcat(self, ha):
+        h1 = HashTable(10, self.hashTable_to_list())
+        for i in range(ha.size):
+            for j in ha.T[i]:
+                h1.insert(j)
+        return self
+
+    def reduce(self, f, initial_state):
+        state = initial_state
+        for i in range(self.size):
+            if(self.T[i]):
+                current = self.T[i].head
+                while current is not None:
+                    state = f(state, current.item)
+                    current = current.next
+        return state
+
+    def map(self, f):
+        h1 = HashTable(10, self.hashTable_to_list())
+        for i in range(h1.size):
+            current = SignLinklist.Node(h1.T[i].head.item)
+            while current:
+                h1.T[i].head.item = f(current.item)
+                current = current.next
+        return self
 
     def find(self, k):
         i = self.hash(k)
         return self.T[i].find(k)
 
 if __name__ == '__main__':
-    t = HashTable(10, [12])
+    ht = ImHashTable(3,[1, 2, 3])
+    print('\n'.join(map(str, ht.T)))
+    # ht=ht.delete(1)
+    print(ht.itm_size())
+    # print(ht.hashTable_to_list())
 
