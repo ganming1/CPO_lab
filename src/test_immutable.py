@@ -1,7 +1,4 @@
 import unittest
-from hypothesis import given
-import hypothesis.strategies as st
-# from mutable import *
 from immutable import *
 
 
@@ -61,19 +58,17 @@ class MyTestCase(unittest.TestCase):
         for e in test_data:
             lst = ImHashTable(10, e)
             self.assertEqual(lst.reduce(lambda st, _: st + 1, 0), lst.itm_size())
-    #
+
     def test_map(self):
         lst = ImHashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
         lst.map(str)
         self.assertEqual(lst.hashTable_to_list(), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-
 
     def test_find(self):
         t = ImHashTable()
         t.list_to_hashTable([10, 3, 51])
         self.assertEqual(t.find(10), True)
         self.assertEqual(t.find(5), False)
-
 
 
 if __name__ == '__main__':

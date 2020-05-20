@@ -1,29 +1,31 @@
+# Node class
+class Node:
+    def __init__(self, item):
+        self.item = item
+        self.next = None
+
+    def __str__(self):
+        return str(self.item)
+
+
+# Iterable linked list
+class LinklistIterator:
+    def __init__(self, node):
+        self.node = node
+
+    def __next__(self):
+        if self.node:
+            cur_node = self.node
+            self.node = cur_node.next
+            return cur_node.item
+        else:
+            raise StopIteration
+
+    def __iter__(self):
+        return self
+
+
 class SignLinklist:
-    # Node class
-    class Node:
-        def __init__(self, item):
-            self.item = item
-            self.next = None
-
-        def __str__(self):
-            return str(self.item)
-
-    # Iterable linked list
-    class LinklistIterator:
-        def __init__(self, node):
-            self.node = node
-
-        def __next__(self):
-            if self.node:
-                cur_node = self.node
-                self.node = cur_node.next
-                return cur_node.item
-            else:
-                raise StopIteration
-
-        def __iter__(self):
-            return self
-
     def __init__(self, iterable=None):
         self.head = None
         self.tail = None
@@ -32,7 +34,7 @@ class SignLinklist:
 
     # add node
     def append(self, obj):
-        node = SignLinklist.Node(obj)
+        node = Node(obj)
         if not self.head:
             self.head = node
             self.tail = node
@@ -55,7 +57,7 @@ class SignLinklist:
 
     # Traverse linked list
     def __iter__(self):
-        return self.LinklistIterator(self.head)
+        return LinklistIterator(self.head)
 
     # print Call print list
     def __repr__(self):
@@ -98,7 +100,6 @@ class HashTable:
     def insert(self, k):
         i = self.hash(k)
         if self.find(k):
-            # print('Duplicated Insert')
             return self
         else:
             self.T[i].append(k)
@@ -111,14 +112,14 @@ class HashTable:
                 self.T[i].head = self.T[i].head.next
                 break
             if j == k and j == self.T[i].tail.item:
-               pre = self.T[i].head
-               while pre.next != self.T[i].tail:
-                   pre = pre.next
-               self.T[i].tail = None
-               pre.next = None
-               print('\n'.join(map(str, ht.T)))
-               self.T[i].tail = pre
-               break
+                pre = self.T[i].head
+                while pre.next != self.T[i].tail:
+                    pre = pre.next
+                self.T[i].tail = None
+                pre.next = None
+                print('\n'.join(map(str, ht.T)))
+                self.T[i].tail = pre
+                break
             else:
                 pre = self.T[i].head
                 print(type(pre.next))
@@ -138,7 +139,7 @@ class HashTable:
     def reduce(self, f, initial_state):
         state = initial_state
         for i in range(self.size):
-            if(self.T[i]):
+            if (self.T[i]):
                 current = self.T[i].head
                 while current is not None:
                     state = f(state, current.item)
@@ -147,58 +148,12 @@ class HashTable:
 
     def map(self, f):
         for i in range(self.size):
-            current = SignLinklist.Node(self.T[i].head.item)
+            current = Node(self.T[i].head.item)
             while current:
                 self.T[i].head.item = f(current.item)
                 current = current.next
         return self
 
-
-
     def find(self, k):
         i = self.hash(k)
         return self.T[i].find(k)
-
-
-if __name__ == '__main__':
-    ht = HashTable(10,[1, 2, 3])
-    print('\n'.join(map(str, ht.T)))
-    # ht=ht.delete(1)
-    print(ht.itm_size())
-
-# if __name__ == '__main__':
-#     ht = HashTable(3,[1, 2, 3])
-#     # ht.insert(1)
-#     # ht.insert(11)
-#     # ht.insert(21)
-#     # ht.insert(18)
-#     # # ht.insert(29)
-#     # # ht.insert(28)
-#     # # ht.insert(38)
-#     # # ht.insert(219)
-#     # ht1 = HashTable(10,[1, 32, 5, 67, 8])
-#     # ht.mconcat(ht1)
-#     ht.reduce(lambda st, e: st + e, 0)
-#     print(ht.map(str).hashTable_to_list())
-#     # print('\n'.join(map(str, ht.T)))
-    # print(ht.reduce("sum"))
-
-#     print('\n'.join(map(str, ht.T)))
-#
-#     print(ht.find(210))
-#     print('\n'.join(map(str, ht.T)))
-    # ht.delete(1)
-    # ht.delete(28)
-    # print('\n'.join(map(str, ht.T)))
-
-
-    # ls = ht.hashTable_to_list()
-    #
-    # print(ls)
-    # print(ht.itm_size())
-    #
-    # ht2 = HashTable()
-    # ht2.list_to_hashTable([1,2,4,5,10,20,45])
-    # ls2 = ht2.hashTable_to_list()
-    # print(ls2)
-

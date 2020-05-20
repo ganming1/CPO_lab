@@ -1,31 +1,32 @@
 from mutable import *
+# Node class
+class Node:
+    def __init__(self, item):
+        self.item = item
+        self.next = None
+
+    def __str__(self):
+        return str(self.item)
+
+
+# Iterable linked list
+class LinklistIterator:
+    def __init__(self, node):
+        self.node = node
+
+    def __next__(self):
+        if self.node:
+            cur_node = self.node
+            self.node = cur_node.next
+            return cur_node.item
+        else:
+            raise StopIteration
+
+    def __iter__(self):
+        return self
+
 
 class SignLinklist:
-    # Node class
-    class Node:
-        def __init__(self, item):
-            self.item = item
-            self.next = None
-
-        def __str__(self):
-            return str(self.item)
-
-    # Iterable linked list
-    class LinklistIterator:
-        def __init__(self, node):
-            self.node = node
-
-        def __next__(self):
-            if self.node:
-                cur_node = self.node
-                self.node = cur_node.next
-                return cur_node.item
-            else:
-                raise StopIteration
-
-        def __iter__(self):
-            return self
-
     def __init__(self, iterable=None):
         self.head = None
         self.tail = None
@@ -34,7 +35,7 @@ class SignLinklist:
 
     # Add Node
     def append(self, obj):
-        node = SignLinklist.Node(obj)
+        node = Node(obj)
         if not self.head:
             self.head = node
             self.tail = node
@@ -57,29 +58,15 @@ class SignLinklist:
 
     # Traverse linked list
     def __iter__(self):
-        return self.LinklistIterator(self.head)
+        return LinklistIterator(self.head)
 
     # print Call print list
     def __repr__(self):
         return '<' + ','.join(map(str, self)) + '>'
 
 
-# # Hash table is similar to collection
-
+# Hash table is similar to collection
 class ImHashTable(HashTable):
-    # def __init__(self, size = 10, list = None):
-    #     self.size = size
-    #     self.T = [SignLinklist() for x in range(self.size)]
-    #     if (list):
-    #         self.list_to_hashTable(list)
-
-
-
-
-
-
-
-
     def size(self):
         return self.size
 
@@ -159,7 +146,7 @@ class ImHashTable(HashTable):
     def map(self, f):
         h1 = HashTable(10, self.hashTable_to_list())
         for i in range(h1.size):
-            current = SignLinklist.Node(h1.T[i].head.item)
+            current = Node(h1.T[i].head.item)
             while current:
                 h1.T[i].head.item = f(current.item)
                 current = current.next
@@ -169,10 +156,4 @@ class ImHashTable(HashTable):
         i = self.hash(k)
         return self.T[i].find(k)
 
-if __name__ == '__main__':
-    ht = ImHashTable(3,[1, 2, 3])
-    print('\n'.join(map(str, ht.T)))
-    # ht=ht.delete(1)
-    print(ht.itm_size())
-    # print(ht.hashTable_to_list())
 

@@ -1,6 +1,4 @@
 import unittest
-from hypothesis import given
-import hypothesis.strategies as st
 from mutable import *
 
 
@@ -64,7 +62,6 @@ class MyTestCase(unittest.TestCase):
         lst = HashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
         lst.map(str)
         self.assertEqual(lst.hashTable_to_list(), ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"])
-
 
     def test_find(self):
         t = HashTable()
