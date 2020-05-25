@@ -1,4 +1,6 @@
 import unittest
+from hypothesis import given, settings
+import hypothesis.strategies as st
 from immutable import *
 
 
@@ -12,6 +14,12 @@ class MyTestCase(unittest.TestCase):
         ht.list_to_hashTable([1, 2, 4, 5, 10, 20, 45])
         self.assertEqual(ht.itm_size(), 7)
 
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_python_len_and_list_size_equality(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.itm_size(), len(a))
+
     def test_hash(self):
         self.assertEqual(ImHashTable().hash(10), 0)
         self.assertEqual(ImHashTable().hash(15), 5)
@@ -21,11 +29,25 @@ class MyTestCase(unittest.TestCase):
         ht1.list_to_hashTable([3, 5, 28, 90, 34])
         self.assertEqual(ht1.hashTable_to_list(), [90, 3, 34, 5, 28])
 
+    # property-based tests
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_to_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
+
     def test_list_to_hashTable(self):
         lists = [3, 5, 48, 39]
         ht2 = ImHashTable()
         ht2.list_to_hashTable(lists)
         self.assertEqual(ht2.hashTable_to_list(), lists)
+
+    # property-based tests
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_from_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
 
     def test_insert(self):
         t = ImHashTable(10, [12])
