@@ -83,7 +83,7 @@ class HashTable:
         return s
 
     def hash(self, k):
-        return k % self.size
+        return abs(k) % self.size
 
     def hashTable_to_list(self):
         lst = []
@@ -157,3 +157,16 @@ class HashTable:
     def find(self, k):
         i = self.hash(k)
         return self.T[i].find(k)
+
+
+# Re-list according to the mantissa
+def order_list(a):
+    b = sorted(set(a), key=a.index)
+    lists = [[], [], [], [], [], [], [], [], [], []]
+    c = []
+    for i in range(len(b)):
+        lists[abs(b[i]) % 10].append(b[i])
+    for i in range(len(lists)):
+        c.extend(lists[i])
+    return c
+

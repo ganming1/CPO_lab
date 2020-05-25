@@ -1,4 +1,6 @@
 import unittest
+from hypothesis import given, settings
+import hypothesis.strategies as st
 from mutable import *
 
 
@@ -19,11 +21,25 @@ class MyTestCase(unittest.TestCase):
         ht1 = HashTable(10, [3, 5, 28, 90, 34])
         self.assertEqual(ht1.hashTable_to_list(), [90, 3, 34, 5, 28])
 
+    # property-based tests
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_to_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
+
     def test_list_to_hashTable(self):
         lists = [3, 5, 48, 39]
         ht2 = HashTable()
         ht2.list_to_hashTable(lists)
         self.assertEqual(ht2.hashTable_to_list(), lists)
+
+    # property-based tests
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_from_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
 
     def test_insert(self):
         t = HashTable()
@@ -46,7 +62,7 @@ class MyTestCase(unittest.TestCase):
         lst = HashTable(0)
         self.assertEqual(lst.reduce(lambda st, e: st + e, 0), 0)
         # sum of list
-        lst = HashTable(10 , [1, 2, 3])
+        lst = HashTable(10, [1, 2, 3])
         self.assertEqual(lst.reduce(lambda st, e: st + e, 0), 6)
         # size
         test_data = [
@@ -57,6 +73,12 @@ class MyTestCase(unittest.TestCase):
         for e in test_data:
             lst = HashTable(10, e)
             self.assertEqual(lst.reduce(lambda st, _: st + 1, 0), lst.itm_size())
+
+    @settings(max_examples=10)
+    @given(st.lists(elements=st.integers()))
+    def test_python_len_and_list_size_equality(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.itm_size(), len(a))
 
     def test_map(self):
         lst = HashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
