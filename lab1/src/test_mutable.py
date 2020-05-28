@@ -4,6 +4,56 @@ import hypothesis.strategies as st
 from mutable import *
 
 
+class TestCaseNode(unittest.TestCase):
+    # Sets the instructions to be executed before the test begins
+    def setUp(self):
+        self.node = Node(7)
+
+    # Sets the instructions to execute after the test has started
+    def tearDown(self):
+        self.node = None
+        del self.node
+
+
+class TestNodeMethods(TestCaseNode):
+    def test_init(self):
+        # Check all of nodes attributes
+        self.assertEqual(self.node.item, 7)
+        self.assertEqual(self.node.next, None)
+
+    def test_str(self):
+        self.assertEqual(self.node.__str__(), '7')
+
+
+class TestCaseLinklistIterator(unittest.TestCase):
+    # Sets the instructions to be executed before the test begins
+    def setUp(self):
+        self.node = Node(11)
+
+    # Sets the instructions to execute after the test has started
+    def tearDown(self):
+        self.node = None
+        del self.node
+
+
+class TestLinklistIteratorMethods(TestCaseLinklistIterator):
+    def test_init(self):
+        node = Node(11)
+        li = LinklistIterator(node)
+        # Check LinklistIterator attribute
+        self.assertEqual(li.node, node)
+
+    def test_next(self):
+        node = Node(20)
+        li = LinklistIterator(node)
+        self.assertEqual(li.__next__(), node.item)
+
+    def test_iter(self):
+        node = Node(0)
+        li = LinklistIterator(node)
+        self.assertEqual(str(li.__repr__()), str(li))
+
+# the MyTestCase is the hash map's main faction tests, including the class SingnLinklist's append and find.
 class MyTestCase(unittest.TestCase):
     def test_size(self):
         t = HashTable(11)
@@ -22,7 +72,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ht1.hashTable_to_list(), [90, 3, 34, 5, 28])
 
     # property-based tests
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_to_list(self, a):
         ht = HashTable(10, a)
@@ -35,7 +84,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ht2.hashTable_to_list(), lists)
 
     # property-based tests
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_from_list(self, a):
         ht = HashTable(10, a)
@@ -74,11 +122,10 @@ class MyTestCase(unittest.TestCase):
             lst = HashTable(10, e)
             self.assertEqual(lst.reduce(lambda st, _: st + 1, 0), lst.itm_size())
 
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_python_len_and_list_size_equality(self, a):
         ht = HashTable(10, a)
-        self.assertEqual(ht.itm_size(), len(a))
+        self.assertEqual(ht.itm_size(), len(order_list(a)))
 
     def test_map(self):
         lst = HashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])

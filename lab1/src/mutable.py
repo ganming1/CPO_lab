@@ -41,6 +41,7 @@ class SignLinklist:
         else:
             self.tail.next = node
             self.tail = node
+        return obj
 
     # Add nodes in bulk
     def extend(self, iterable):
