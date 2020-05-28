@@ -3,6 +3,54 @@ from hypothesis import given, settings
 import hypothesis.strategies as st
 from immutable import *
 
+class TestCaseNode(unittest.TestCase):
+    # Sets the instructions to be executed before the test begins
+    def setUp(self):
+        self.node = Node(7)
+
+    # Sets the instructions to execute after the test has started
+    def tearDown(self):
+        self.node = None
+        del self.node
+
+
+class TestNodeMethods(TestCaseNode):
+    def test_init(self):
+        # Check all of nodes attributes
+        self.assertEqual(self.node.item, 7)
+        self.assertEqual(self.node.next, None)
+
+    def test_str(self):
+        self.assertEqual(self.node.__str__(), '7')
+
+
+class TestCaseLinklistIterator(unittest.TestCase):
+    # Sets the instructions to be executed before the test begins
+    def setUp(self):
+        self.node = Node(11)
+
+    # Sets the instructions to execute after the test has started
+    def tearDown(self):
+        self.node = None
+        del self.node
+
+
+class TestLinklistIteratorMethods(TestCaseLinklistIterator):
+    def test_init(self):
+        node = Node(11)
+        li = LinklistIterator(node)
+        # Check LinklistIterator attribute
+        self.assertEqual(li.node, node)
+
+    def test_next(self):
+        node = Node(20)
+        li = LinklistIterator(node)
+        self.assertEqual(li.__next__(), node.item)
+
+    def test_iter(self):
+        node = Node(0)
+        li = LinklistIterator(node)
+        self.assertEqual(str(li.__repr__()), str(li))
 
 class MyTestCase(unittest.TestCase):
     def test_size(self):
@@ -14,11 +62,10 @@ class MyTestCase(unittest.TestCase):
         ht.list_to_hashTable([1, 2, 4, 5, 10, 20, 45])
         self.assertEqual(ht.itm_size(), 7)
 
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_python_len_and_list_size_equality(self, a):
         ht = HashTable(10, a)
-        self.assertEqual(ht.itm_size(), len(a))
+        self.assertEqual(ht.itm_size(), len(order_list(a)))
 
     def test_hash(self):
         self.assertEqual(ImHashTable().hash(10), 0)
@@ -30,7 +77,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ht1.hashTable_to_list(), [90, 3, 34, 5, 28])
 
     # property-based tests
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_to_list(self, a):
         ht = HashTable(10, a)
@@ -43,7 +89,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ht2.hashTable_to_list(), lists)
 
     # property-based tests
-    @settings(max_examples=10)
     @given(st.lists(elements=st.integers()))
     def test_from_list(self, a):
         ht = HashTable(10, a)
