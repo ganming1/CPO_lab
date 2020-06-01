@@ -41,6 +41,17 @@ class SignLinklist:
         else:
             self.tail.next = node
             self.tail = node
+            # if self.head.item > obj:
+            #     node.next = self.head.next
+            #     self.head = node
+            # elif self.tail.item < obj:
+            #     self.tail.next = node
+            #     self.tail = node
+            # else:
+            #     tmp = self.head
+            #     while tmp.item < obj:
+            #         tmp = tmp.next
+
         return obj
 
     # Add nodes in bulk
@@ -132,9 +143,10 @@ class HashTable:
         return self
 
     def mconcat(self, ha):
-        for i in range(ha.size):
-            for j in ha.T[i]:
-                self.insert(j)
+        if ha.itm_size() > 0:
+            for i in range(ha.size):
+                for j in ha.T[i]:
+                    self.insert(j)
         return self
 
     def reduce(self, f, initial_state):
@@ -170,4 +182,6 @@ def order_list(a):
     for i in range(len(lists)):
         c.extend(lists[i])
     return c
+
+
 

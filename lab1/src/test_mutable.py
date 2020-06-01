@@ -53,6 +53,7 @@ class TestLinklistIteratorMethods(TestCaseLinklistIterator):
         li = LinklistIterator(node)
         self.assertEqual(str(li.__repr__()), str(li))
 
+
 # the MyTestCase is the hash map's main faction tests, including the class SingnLinklist's append and find.
 class MyTestCase(unittest.TestCase):
     def test_size(self):
@@ -71,23 +72,11 @@ class MyTestCase(unittest.TestCase):
         ht1 = HashTable(10, [3, 5, 28, 90, 34])
         self.assertEqual(ht1.hashTable_to_list(), [90, 3, 34, 5, 28])
 
-    # property-based tests
-    @given(st.lists(elements=st.integers()))
-    def test_to_list(self, a):
-        ht = HashTable(10, a)
-        self.assertEqual(ht.hashTable_to_list(), order_list(a))
-
     def test_list_to_hashTable(self):
         lists = [3, 5, 48, 39]
         ht2 = HashTable()
         ht2.list_to_hashTable(lists)
         self.assertEqual(ht2.hashTable_to_list(), lists)
-
-    # property-based tests
-    @given(st.lists(elements=st.integers()))
-    def test_from_list(self, a):
-        ht = HashTable(10, a)
-        self.assertEqual(ht.hashTable_to_list(), order_list(a))
 
     def test_insert(self):
         t = HashTable()
@@ -126,6 +115,43 @@ class MyTestCase(unittest.TestCase):
     def test_python_len_and_list_size_equality(self, a):
         ht = HashTable(10, a)
         self.assertEqual(ht.itm_size(), len(order_list(a)))
+
+    @given(st.lists(elements=st.integers()))
+    def test_to_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
+
+    @given(st.lists(elements=st.integers()))
+    def test_from_list(self, a):
+        ht = HashTable(10, a)
+        self.assertEqual(ht.hashTable_to_list(), order_list(a))
+
+    @given(a=st.lists(elements=st.integers()), b=st.lists(elements=st.integers()), c=st.lists(elements=st.integers()))
+    def test_monoid_associativity(self, a: int, b: int, c: int) -> None:
+        # ht1 + (ht2 + ht3)
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, b)
+        ht3 = HashTable(10, c)
+        temp = ht2.mconcat(ht3)
+        test1 = ht1.mconcat(temp)
+        # (ht1 + ht2) + ht3
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, b)
+        ht3 = HashTable(10, c)
+        temp = ht1.mconcat(ht2)
+        test2 = temp.mconcat(ht3)
+        self.assertEqual(test1.hashTable_to_list(), test2.hashTable_to_list())
+
+    @given(a=st.lists(st.integers()))
+    def test_monoid_identity(self, a) -> None:
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, [])
+        # test1 = 0 + ht1
+        test1 = ht2.mconcat(ht1)
+        # test2 = ht1 + 0
+        test2 = ht1.mconcat(ht2)
+        self.assertEqual(ht1.hashTable_to_list(), test1.hashTable_to_list())
+        self.assertEqual(ht1.hashTable_to_list(), test2.hashTable_to_list())
 
     def test_map(self):
         lst = HashTable(10, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])

@@ -137,6 +137,33 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(t.find(10), True)
         self.assertEqual(t.find(5), False)
 
+    @given(a=st.lists(elements=st.integers()), b=st.lists(elements=st.integers()), c=st.lists(elements=st.integers()))
+    def test_monoid_associativity(self, a: int, b: int, c: int) -> None:
+        # ht1 + (ht2 + ht3)
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, b)
+        ht3 = HashTable(10, c)
+        temp = ht2.mconcat(ht3)
+        test1 = ht1.mconcat(temp)
+        # (ht1 + ht2) + ht3
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, b)
+        ht3 = HashTable(10, c)
+        temp = ht1.mconcat(ht2)
+        test2 = temp.mconcat(ht3)
+        self.assertEqual(test1.hashTable_to_list(), test2.hashTable_to_list())
+
+    @given(a=st.lists(st.integers()))
+    def test_monoid_identity(self, a) -> None:
+        ht1 = HashTable(10, a)
+        ht2 = HashTable(10, [])
+        # test1 = 0 + ht1
+        test1 = ht2.mconcat(ht1)
+        # test2 = ht1 + 0
+        test2 = ht1.mconcat(ht2)
+        self.assertEqual(ht1.hashTable_to_list(), test1.hashTable_to_list())
+        self.assertEqual(ht1.hashTable_to_list(), test2.hashTable_to_list())
+
 
 if __name__ == '__main__':
     unittest.main()
