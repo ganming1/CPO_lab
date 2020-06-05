@@ -1,34 +1,45 @@
 from Multiple import *
-
-overload = multimethod
-
-
+import numpy as np
 class Foo:
-    @overload(int, int)
-    def add(n, m, *args):
-        return n + m
+    @multimethod(int, int)
+    def add(a, b, *args):
+        return a + b
 
-    @overload(float, float)
-    def add(n, m, *args):
-        return n + m
+    @multimethod(float, float)
+    def add(a, b, *args):
+        return a + b
 
-    @overload(int, float)
-    def add(n, m, *args):
-        return n + m
+    @multimethod(int, float)
+    def add(a, b, *args):
+        return a + b
 
-    @overload(object, object)
-    def add(n, m, *args):
-        return str(n) + str(m)
+    @multimethod(object, object)
+    def add(a, b, *args):
+        return str(a) + str(b)
 
-    @overload(int, str)
-    def add(n, m, *args):
-        return str(n) + m
+    @multimethod(int, str)
+    def add(a, b, *args):
+        return str(a) + b
+    @multimethod(str, int)
+    def Str_Mult(a, b, *args):
+        return a *b
+    @multimethod(str, int)
+    def add(a, b, *args):
+        return a + str(b)
+    @multimethod(str, float)
+    def add(a, b, *args):
+        return a + str(b)
+    @multimethod(np.ndarray,np.ndarray)
+    def add(a, b, *args):
+        return a + b
+    @multimethod(np.ndarray,int)
+    def MAtrixIntMult(a, b, *args):
+        return a * b
+    @multimethod(np.ndarray,np.ndarray)
+    def MatrixMult(a, b, *args):
+        return np.dot(a, b) 
 
-    @overload(str, int)
-    def add(n, m, *args):
-        return n + str(m)
-
-    @overload()
+    @multimethod()
     def add(*args):
         k = 0
         for i in range(len(args)):
@@ -42,7 +53,7 @@ class Foo:
                 k = k + args[i]
         return k
 
-    @overload(str)
+    @multimethod(str)
     def add(*args):
         k = 0
         for i in range(len(args)):
@@ -58,12 +69,15 @@ class Foo:
 
 
 class Foo1(Foo):
-    @overload(float, int)
-    def add(n, m, *args):
-        return n + m
+    @multimethod(float, int)
+    def add(a, b, *args):
+        return a + b
 
 
 class Foo2(Foo1):
-    @overload(int, int, int)
-    def add(n, m, *args):
-        return n + m + args[0]
+    @multimethod(int, int, int)
+    def add(a, b, *args):
+        return a + b + args[0]
+
+
+
