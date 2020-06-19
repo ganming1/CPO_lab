@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="27ff5b37-7b15-437a-9759-0a7d01b2260f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/lab1/fig/test_immutable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/fig/test_mutable5.28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/4562e0772784952d/ace51113badbbd3b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/4562e0772784952d/ba53d99829fea622" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/005c4768de4ce5a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/08e997a4bc15fa5c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/0d38a30a7964263c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/0d9cdbc0ab42f90b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/3d9c5364cdcc55c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/464654e87aed9ca7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/4996598533616d03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/504444ab2220c8be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/5a900a82ef359270" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/5c871a67b4bce3c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/60d87b21c16b00b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/6134ac182f0402b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/85afb1055d1a6838" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/8ec530f7d187ee62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/911829ff9def117e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/a1dfcb699080cb5f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/a906716e31377bdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/cae6423fda3bd107" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/dfb539e9f5d37f36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/7d87d7d5778b6d7b/fcb46aabf0eb5faa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab1/src/.hypothesis/examples/d882195c2944cb71/94f83c4fb29881bd" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cUEHCVuB0tQ6YeVhA8ez9zBhiN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for Test.FactorialTest">
+    <configuration name="Unittests for Test.FactorialTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CPO_lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab3/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Test.FactorialTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for Test.FactorialTest.test_Foo" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CPO_lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab3/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;Test.FactorialTest.test_Foo&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_mutable.MyTestCase.test_monoid_identity" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CPO_lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab1/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_mutable.MyTestCase.test_monoid_identity&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_immutable.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CPO_lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab1/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/lab1/src/test_immutable.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_mutable.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CPO_lab1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/lab1/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/lab1/src/test_mutable.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for Test.FactorialTest" />
+        <item itemvalue="Python tests.Unittests for Test.FactorialTest.test_Foo" />
+        <item itemvalue="Python tests.Unittests in test_mutable.py" />
+        <item itemvalue="Python tests.Unittests in test_immutable.py" />
+        <item itemvalue="Python tests.Unittests for test_mutable.MyTestCase.test_monoid_identity" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="27ff5b37-7b15-437a-9759-0a7d01b2260f" name="Default Changelist" comment="" />
+      <created>1590574682092</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590574682092</updated>
+      <workItem from="1590574684638" duration="2364000" />
+      <workItem from="1590626262422" duration="4646000" />
+      <workItem from="1590632266211" duration="665000" />
+      <workItem from="1590986301314" duration="2718000" />
+      <workItem from="1590989027453" duration="2762000" />
+      <workItem from="1591181879561" duration="680000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="789" y="270" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590574764399">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="789" y="270" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1590574764399" />
+    <state width="1398" height="192" key="GridCell.Tab.0.bottom" timestamp="1591184057767">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1591182034263" />
+    <state width="1398" height="114" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1590631798995" />
+    <state width="1398" height="192" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1591184057767" />
+    <state width="1398" height="2" key="GridCell.Tab.0.bottom/1440.-180.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1590996880785" />
+    <state width="1398" height="192" key="GridCell.Tab.0.center" timestamp="1591184057765">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1591182034262" />
+    <state width="1398" height="114" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1590631798994" />
+    <state width="1398" height="2" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1590996880775" />
+    <state width="1398" height="192" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1591184057765" />
+    <state width="1398" height="2" key="GridCell.Tab.0.center/1440.-180.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1590996880784" />
+    <state width="1398" height="192" key="GridCell.Tab.0.left" timestamp="1591184057765">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1591182034261" />
+    <state width="1398" height="114" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1590631798994" />
+    <state width="1398" height="2" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1590996880768" />
+    <state width="1398" height="192" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1591184057765" />
+    <state width="1398" height="2" key="GridCell.Tab.0.left/1440.-180.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1590996880783" />
+    <state width="1398" height="192" key="GridCell.Tab.0.right" timestamp="1591184057766">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="305" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1591182034262" />
+    <state width="1398" height="114" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1590631798995" />
+    <state width="1398" height="192" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1591184057766" />
+    <state width="1398" height="2" key="GridCell.Tab.0.right/1440.-180.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1590996880784" />
+    <state x="290" y="79" key="SettingsEditor" timestamp="1590579856551">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="290" y="79" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1590579856551" />
+    <state x="290" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1590576136135" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_in_test_immutable_py.coverage" NAME="Unittests in test_immutable.py Coverage Results" MODIFIED="1590990876937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestCaseSignLinklist.coverage" NAME="Unittests for test_mutable.TestCaseSignLinklist Coverage Results" MODIFIED="1590631380888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_MyTestCase_test_monoid_associativity.coverage" NAME="Unittests for test_mutable.MyTestCase.test_monoid_associativity Coverage Results" MODIFIED="1590990495277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_MyTestCase_test_monoid_identity.coverage" NAME="Unittests for test_mutable.MyTestCase.test_monoid_identity Coverage Results" MODIFIED="1590990841231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_immutable_MyTestCase_test_python_len_and_list_size_equality.coverage" NAME="Unittests for test_immutable.MyTestCase.test_python_len_and_list_size_equality Coverage Results" MODIFIED="1590626417644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_in_test_mutable_py.coverage" NAME="Unittests in test_mutable.py Coverage Results" MODIFIED="1590990901506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_Test_FactorialTest_test_Foo.coverage" NAME="Unittests for Test.FactorialTest.test_Foo Coverage Results" MODIFIED="1591182025697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab3/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestNodeMethods_test_init.coverage" NAME="Unittests for test_mutable.TestNodeMethods.test_init Coverage Results" MODIFIED="1590627254689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestLinklistIteratorMethods_test_next.coverage" NAME="Unittests for test_mutable.TestLinklistIteratorMethods.test_next Coverage Results" MODIFIED="1590629823651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestSignLinklistMethods_test_append.coverage" NAME="Unittests for test_mutable.TestSignLinklistMethods.test_append Coverage Results" MODIFIED="1590631414259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_immutable_MyTestCase_test_insert.coverage" NAME="Unittests for test_immutable.MyTestCase.test_insert Coverage Results" MODIFIED="1590626329483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestCaseLinklistIterator.coverage" NAME="Unittests for test_mutable.TestCaseLinklistIterator Coverage Results" MODIFIED="1590628924672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$mutable.coverage" NAME="mutable Coverage Results" MODIFIED="1590990384764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestCaseNode.coverage" NAME="Unittests for test_mutable.TestCaseNode Coverage Results" MODIFIED="1590627067398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_immutable_MyTestCase_test_from_list.coverage" NAME="Unittests for test_immutable.MyTestCase.test_from_list Coverage Results" MODIFIED="1590626320741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestNodeMethods_test_str.coverage" NAME="Unittests for test_mutable.TestNodeMethods.test_str Coverage Results" MODIFIED="1590627445400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_MyTestCase_test_map.coverage" NAME="Unittests for test_mutable.MyTestCase.test_map Coverage Results" MODIFIED="1590989335695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_MyTestCase_test_from_list.coverage" NAME="Unittests for test_mutable.MyTestCase.test_from_list Coverage Results" MODIFIED="1590989953890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_MyTestCase_test_python_len_and_list_size_equality.coverage" NAME="Unittests for test_mutable.MyTestCase.test_python_len_and_list_size_equality Coverage Results" MODIFIED="1590989814093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_test_mutable_TestLinklistIteratorMethods_test_init.coverage" NAME="Unittests for test_mutable.TestLinklistIteratorMethods.test_init Coverage Results" MODIFIED="1590629422282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab1/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$test.coverage" NAME="test Coverage Results" MODIFIED="1590580030753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab3/src" />
+    <SUITE FILE_PATH="coverage/CPO_lab$Unittests_for_Test_FactorialTest.coverage" NAME="Unittests for Test.FactorialTest Coverage Results" MODIFIED="1591182034237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lab3/src" />
+  </component>
+</project>
